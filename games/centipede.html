@@ -12,7 +12,7 @@
   </style>
 </head>
 <body>
-  <script src="../dist/littlejs.js?1.18.15"></script>
+  <script src="../dist/littlejs.js?1.18.15.1"></script>
   <script src="../templates/soundGenerator.js"></script>
   <script src="../templates/textureGenerator.js"></script>
   <script src="../templates/menus.js"></script>
@@ -24,9 +24,11 @@
   showEngineVersion = false;
 
   // Touch gamepad: analog stick + 1 face button (fire). Player needs free 2D
-  // movement (not just 4-dir), so analog is the right call.
+  // movement (not just 4-dir), so analog is the right call. Floating mode
+  // anchors the stick under the player's thumb instead of the corner.
   touchGamepadEnable = true;
   touchGamepadAnalog = true;
+  touchGamepadFloating = true;
   touchGamepadButtonCount = 2;
   touchGamepadAlpha = .35;
 
