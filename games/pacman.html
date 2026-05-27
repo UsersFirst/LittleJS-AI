@@ -12,11 +12,13 @@
 debugWatermark = false; // Hide debug watermark in corner
 showEngineVersion = false; // Hide engine version console display
 
-// Touch gamepad: analog stick (circle) — diagnostic to confirm cache/deploy is
-// actually picking up changes on mobile. Pacman's grid mover snaps to 4 dirs
-// internally so analog output is fine.
+// Touch gamepad: analog circle + floating anchor. The stick anchors under the
+// thumb on first touch (instead of parked in the corner), and a second filled
+// thumb dot tracks your finger inside the ring. Keeping analog=true while we
+// verify floating works visibly; will flip back to the cross dpad afterward.
 touchGamepadEnable = true;
 touchGamepadAnalog = true;
+touchGamepadFloating = true;
 touchGamepadButtonCount = 0;
 touchGamepadAlpha = .35;
 
