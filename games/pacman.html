@@ -12,12 +12,11 @@
 debugWatermark = false; // Hide debug watermark in corner
 showEngineVersion = false; // Hide engine version console display
 
-// Touch gamepad: analog circle + floating anchor. The stick anchors under the
-// thumb on first touch (instead of parked in the corner), and a second filled
-// thumb dot tracks your finger inside the ring. Keeping analog=true while we
-// verify floating works visibly; will flip back to the cross dpad afterward.
+// Touch gamepad: 8-way cross dpad that floats — anchors under the player's
+// thumb on first touch instead of being parked in the bottom-left corner.
+// Output is grid-snapped (correct for Pacman's 4-direction movement).
 touchGamepadEnable = true;
-touchGamepadAnalog = true;
+touchGamepadAnalog = false;
 touchGamepadFloating = true;
 touchGamepadButtonCount = 0;
 touchGamepadAlpha = .35;
