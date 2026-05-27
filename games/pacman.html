@@ -12,9 +12,11 @@
 debugWatermark = false; // Hide debug watermark in corner
 showEngineVersion = false; // Hide engine version console display
 
-// Touch gamepad: 8-way digital stick is perfect for a 4-direction grid game.
+// Touch gamepad: analog stick (circle) — diagnostic to confirm cache/deploy is
+// actually picking up changes on mobile. Pacman's grid mover snaps to 4 dirs
+// internally so analog output is fine.
 touchGamepadEnable = true;
-touchGamepadAnalog = false;
+touchGamepadAnalog = true;
 touchGamepadButtonCount = 0;
 touchGamepadAlpha = .35;
 
