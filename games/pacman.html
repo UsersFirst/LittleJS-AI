@@ -2,7 +2,7 @@
  <title>LittleJS Pac-Man</title>
  <meta charset=utf-8>
  </head><body>
- <script src="../dist/littlejs.js?1.18.15.1"></script>
+ <script src="../dist/littlejs.js?1.18.15"></script>
  <script src="../templates/soundGenerator.js"></script>
  <script src="../templates/menus.js"></script>
  <script>
@@ -12,12 +12,9 @@
 debugWatermark = false; // Hide debug watermark in corner
 showEngineVersion = false; // Hide engine version console display
 
-// Touch gamepad: 8-way cross dpad that floats — anchors under the player's
-// thumb on first touch instead of being parked in the bottom-left corner.
-// Output is grid-snapped (correct for Pacman's 4-direction movement).
+// Touch gamepad: 8-way digital stick is perfect for a 4-direction grid game.
 touchGamepadEnable = true;
 touchGamepadAnalog = false;
-touchGamepadFloating = true;
 touchGamepadButtonCount = 0;
 touchGamepadAlpha = .35;
 
