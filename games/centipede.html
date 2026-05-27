@@ -30,6 +30,7 @@
   touchGamepadAnalog = true;
   touchGamepadFloating = true;
   touchGamepadButtonCount = 2;
+  touchGamepadSize = 180; // default 100 — bigger for thumb-friendly mobile
   touchGamepadAlpha = .35;
 
 // SFX
@@ -1041,8 +1042,8 @@
       debugShowErrors();
 
       setShowSplashScreen(false);
-      setCanvasFixedSize(vec2(1280, 720));
-      setCameraScale(30);
+      // Let the canvas fill the device viewport; gameUpdatePost fits cameraScale
+      // each frame so the whole 40×26 playfield stays visible on portrait phones.
       setCameraPos(levelSize.scale(.5));
       setCanvasPixelated(false);
       setTilesPixelated(false);
@@ -1319,7 +1320,8 @@
 
   function gameUpdatePost()
   {
-      // keep camera steady
+      // Fit the whole playfield into the canvas (handles orientation changes too).
+      cameraScale = min(mainCanvasSize.x / gridSize.x, mainCanvasSize.y / gridSize.y);
       setCameraPos(levelSize.scale(.5));
   }
 
