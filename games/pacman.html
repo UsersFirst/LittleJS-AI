@@ -2,7 +2,7 @@
  <title>LittleJS Pac-Man</title>
  <meta charset=utf-8>
  </head><body>
- <script src="../dist/littlejs.js?1.18.15"></script>
+ <script src="../dist/littlejs.js?1.18.15.1"></script>
  <script src="../templates/soundGenerator.js"></script>
  <script src="../templates/menus.js"></script>
  <script>
@@ -12,10 +12,9 @@
 debugWatermark = false; // Hide debug watermark in corner
 showEngineVersion = false; // Hide engine version console display
 
-// Touch gamepad: try analog mode — Pacman's grid movement still snaps turns to
-// the 4 cardinal directions, so analog feel doesn't hurt input fidelity.
+// Touch gamepad: 8-way digital stick is perfect for a 4-direction grid game.
 touchGamepadEnable = true;
-touchGamepadAnalog = true;
+touchGamepadAnalog = false;
 touchGamepadButtonCount = 0;
 touchGamepadAlpha = .35;
 
